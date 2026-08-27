@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Hearth & Honey Café — slow coffee, fresh bakes, and warm moments." />
+    <title>Hearth & Honey Café</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link href="assets/plugins/bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/plugins/fontawesome-free-7.2.0-web/fontawesome-free-7.2.0-web/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#home" aria-label="Hearth and Honey home">
+                <span class="brand-mark"><i class="fa-solid fa-mug-hot"></i></span>
+                <span>Hearth <em>&amp;</em> Honey</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks" aria-controls="navLinks" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navLinks">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item ms-lg-2"><a class="btn btn-honey btn-sm px-3" href="#contact">Find a table <i class="fa-solid fa-arrow-up-long fa-rotate-by ms-1" style="--fa-rotate-angle: 45deg;"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- Home -->
+        <section class="hero" id="home">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <p class="eyebrow text-light">Coffee, comfort &amp; community</p>
+                <h1>Your daily cup<br /><span>of good things.</span></h1>
+                <p class="hero-copy">Slow mornings, thoughtful coffee, and something sweet waiting around every corner.</p>
+                <div class="d-flex flex-wrap gap-3">
+                    <a class="btn btn-honey btn-lg" href="#menu">View our menu <i class="fa-solid fa-arrow-down ms-2"></i></a>
+                    <a class="btn btn-outline-light btn-lg" href="#about">Our story</a>
+                </div>
+            </div>
+            <div class="scroll-cue d-none d-md-flex"><span></span> Scroll to explore</div>
+        </section>
+
+        <!-- Menu Section -->
+        <section class="section-padding menu-section" id="menu">
+            <div class="container">
+                <div class="section-heading text-center mx-auto">
+                    <p class="eyebrow">Made with care</p>
+                    <h2>Good food. Great mood.</h2>
+                    <p>From our first pour to the last crumb, every item is made to brighten your day.</p>
+                </div>
+                <div class="filter-buttons d-flex justify-content-center flex-wrap gap-2 my-5" role="group" aria-label="Filter menu by category">
+                    <button class="filter-btn active" data-filter="all">All favourites</button>
+                    <button class="filter-btn" data-filter="coffee">Coffee</button>
+                    <button class="filter-btn" data-filter="food">Food</button>
+                    <button class="filter-btn" data-filter="desserts">Desserts</button>
+                </div>
+
+                <!-- Menu Grid -->
+                <div class="row g-4" id="menuGrid">
+
+                    <div class="col-sm-6 col-lg-3 menu-item" data-category="coffee"><article class="menu-card"><div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=700&q=80" alt="Latte in a ceramic cup" /><span class="price">$5.50</span></div>
+                        <div class="p-3">
+                            <p class="card-category">Coffee</p>
+                            <h3>Honey Oat Latte</h3>
+                            <p>A silky oat latte finished with wildflower honey and cinnamon.</p>
+                        </div></article>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 menu-item" data-category="coffee"><article class="menu-card"><div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=700&q=80" alt="Espresso being poured" /><span class="price">$4.25</span></div>
+                        <div class="p-3">
+                            <p class="card-category">Coffee</p>
+                            <h3>House Espresso</h3>
+                            <p>Rich, chocolatey, and balanced with a toasted hazelnut finish.</p>
+                        </div></article>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 menu-item" data-category="food"><article class="menu-card"><div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=700&q=80" alt="Avocado toast with egg" /><span class="price">$12.00</span></div>
+                        <div class="p-3">
+                            <p class="card-category">Food</p>
+                            <h3>Garden Toast</h3>
+                            <p>Smashed avocado, greens, chili crisp, and a jammy egg on sourdough.</p>
+                        </div></article>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 menu-item" data-category="food"><article class="menu-card"><div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=80" alt="Fresh grain bowl" /><span class="price">$14.50</span></div>
+                        <div class="p-3">
+                            <p class="card-category">Food</p>
+                            <h3>Golden Grain Bowl</h3><p>Warm grains, roasted vegetables, feta, herbs, and lemon tahini.</p>
+                        </div></article>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 menu-item" data-category="desserts"><article class="menu-card"><div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=80" alt="Chocolate cake slice" /><span class="price">$7.00</span></div>
+                        <div class="p-3">
+                            <p class="card-category">Desserts</p>
+                            <h3>Midnight Cake</h3>
+                            <p>Dark chocolate sponge, espresso ganache, and a pinch of sea salt.</p>
+                        </div></article>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 menu-item" data-category="desserts"><article class="menu-card"><div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=700&q=80" alt="Glazed doughnuts" /><span class="price">$4.50</span></div>
+                        <div class="p-3">
+                            <p class="card-category">Desserts</p>
+                            <h3>Honey Doughnut</h3>
+                            <p>Soft, pillowy, and glazed with our signature orange blossom honey.</p>
+                        </div></article>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 menu-item" data-category="coffee"><article class="menu-card"><div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=700&q=80" alt="Iced coffee" /><span class="price">$5.75</span></div>
+                        <div class="p-3">
+                            <p class="card-category">Coffee</p>
+                            <h3>Maple Cold Brew</h3>
+                            <p>House-steeped cold brew, maple syrup, and a cloud of sweet cream.</p>
+                        </div></article>
+                    </div>
+                    <div class="col-sm-6 col-lg-3 menu-item" data-category="food"><article class="menu-card"><div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=700&q=80" alt="Pancakes with berries" /><span class="price">$11.50</span></div>
+                        <div class="p-3">
+                            <p class="card-category">Food</p>
+                            <h3>Berry Pancakes</h3>
+                            <p>Fluffy buttermilk stacks with whipped mascarpone and seasonal berries.</p>
+                        </div></article>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="section-padding about-section" id="about">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <div class="about-image">
+                            <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1000&q=85" alt="Warm, welcoming café interior" />
+                            <div class="image-note">
+                                <strong>Est. 2018</strong><span>Made for lingering</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 ps-lg-5">
+                        <p class="eyebrow">A little about us</p>
+                        <h2>Come as you are.<br /><em>Stay awhile.</em></h2>
+                        <p class="lead">Hearth &amp; Honey began with a simple idea: make a café that feels like a friend’s kitchen on a Sunday morning.</p>
+                        <p>We source with intention, bake in small batches, and believe the best conversations happen over a second cup. Whether you’re catching up with a friend or enjoying a quiet moment alone, there’s always a seat for you here.</p>
+                        <a href="#contact" class="text-link">Meet us at the café <i class="fa-solid fa-arrow-right-long"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section class="gallery-section" id="gallery">
+            <div class="container-fluid px-0">
+                <div class="section-heading text-center mx-auto mb-5">
+                    <p class="eyebrow">A peek inside</p>
+                    <h2>Little moments at Hearth &amp; Honey</h2>
+                </div>
+                <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row g-2">
+                                <div class="col-6 col-md-3">
+                                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=900&q=80" alt="Café counter" />
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=900&q=80" alt="Café seating" />
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=900&q=80" alt="Coffee and pastry" />
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=80" alt="Coffee on a table" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row g-2">
+                                <div class="col-6 col-md-3">
+                                    <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=900&q=80" alt="Coffee brewing" />
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80" alt="Latte art" />
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80" alt="Café tables" />
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=900&q=80" alt="Coffee beans" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="section-padding contact-section" id="contact">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-lg-5">
+                        <p class="eyebrow">Come say hello</p>
+                        <h2>There’s always room at our table.</h2>
+                        <div class="contact-details mt-4">
+                            <div>
+                                <i class="fa-solid fa-location-dot"></i>
+                                <p><strong>Find us</strong><br />18 Willow Lane, Brookside<br />Portland, OR 97205</p>
+                            </div>
+                            <div>
+                                <i class="fa-regular fa-clock"></i>
+                                <p><strong>Opening hours</strong><br />Mon–Fri: 7am–6pm<br />Sat–Sun: 8am–5pm</p>
+                            </div>
+                            <div>
+                                <i class="fa-regular fa-envelope"></i>
+                                <p><strong>Say hello</strong><br />hello@hearthandhoney.cafe<br />(503) 555-0188</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="map-placeholder">
+                            <div class="map-pin">
+                                <i class="fa-solid fa-location-dot fs-5"></i>
+                            </div>
+                            <span>Map placeholder</span><small>18 Willow Lane · Brookside</small>
+                        </div>
+
+                        <!-- Form -->
+                        <form id="contactForm" class="contact-form mt-4" novalidate>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label">Your name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Smit Salunkhe" required />
+                                    <div class="invalid-feedback">Please enter your name.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="email" placeholder="smit@example.com" required />
+                                    <div class="invalid-feedback">Please enter a valid email.</div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" rows="4" placeholder="Tell us how we can help..." required></textarea>
+                                    <div class="invalid-feedback">Please write a message.</div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-dark btn-lg" type="submit">Send a note <i class="fa-regular fa-paper-plane ms-2"></i></button>
+                                    <p id="formMessage" class="form-message mt-3" role="status"></p>
+                                </div>
+                            </div>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row align-items-center gy-4">
+                <div class="col-md-5">
+                    <a class="navbar-brand text-light" href="#home">
+                        <span class="brand-mark"><i class="fa-solid fa-mug-hot"></i></span> 
+                        Hearth <em>&amp;</em> Honey
+                    </a>
+                    <p class="footer-note mt-3">Slow coffee. Fresh bakes. Warm welcome.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="footer-links">
+                        <a href="#menu">Menu</a>
+                        <a href="#about">Our story</a>
+                        <a href="#gallery">Gallery</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+                <div class="col-md-3 text-md-end">
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="#" aria-label="X-Twitter">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div><hr />
+            <div class="d-flex flex-column flex-sm-row justify-content-between gap-2 small">
+                <span>© <span id="year"></span> Hearth &amp; Honey Café</span><span>Made with warmth in Portland</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back-to-Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
